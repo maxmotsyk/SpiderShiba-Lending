@@ -1,0 +1,59 @@
+@use '/src/assets/module' as va;
+
+.mainBaner_container {
+    margin: 93px 0 0 0;
+
+    .mainBaner_row {
+        display: flex;
+        align-items: center;
+
+        .text_content {
+
+            h1 {
+                font-family: 'SF Pro Display', sans-serif;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 80px;
+                line-height: 90px;
+                color: va.$main-text-color;
+
+                b {
+                    color: va.$second-text-color;
+                }
+
+            }
+
+            p {
+                margin: 40px 0 0 0;
+
+                max-width: 848px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 38px;
+                color: #A0A3B5;
+            }
+
+            .bt_area{
+                margin: 46px 0 0 0;
+
+                a{
+                    height: 80px;
+
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 30px;
+                    color:va.$main-text-color;
+                }
+
+                a:first-of-type{
+                    color:black;
+                }
+
+            }
+
+        }
+
+    }
+
+}
