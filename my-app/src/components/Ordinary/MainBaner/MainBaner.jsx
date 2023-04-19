@@ -2,6 +2,10 @@ import s from './MainBaner.module.scss';
 
 const MainBaner = () => {
 
+    function saveToClipboard (str) {
+        navigator.clipboard.writeText(str.textContent);
+    }
+
     return (
 
         <div className={`container ${s.mainBaner_container}`}>
@@ -29,6 +33,15 @@ const MainBaner = () => {
                         <a className={s.bt_more} href="#">
                             More about SpiderShiba Inu
                         </a>
+
+                    </div>
+
+                    <div className={s.copy_address_col}>
+
+                        <label>
+                            Contract address:
+                            <button onClick={(e)=>{saveToClipboard(e.target)}}>0xe4C6E7a0F696Fb2356A187020eb13E742792Fdcc</button>
+                        </label>
 
                     </div>
 

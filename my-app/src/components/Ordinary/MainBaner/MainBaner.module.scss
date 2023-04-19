@@ -35,19 +35,70 @@
             }
 
             .bt_area{
+                display: flex;
                 margin: 46px 0 0 0;
 
                 a{
                     height: 80px;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
 
+                    color:va.$main-text-color;
                     font-weight: 700;
                     font-size: 25px;
                     line-height: 30px;
                     color:va.$main-text-color;
+                    border-radius: 10px;
+                    white-space: nowrap;
+
+
+                    &:first-of-type{
+                        padding: 25px 54px;
+                        max-width: 295px;
+                        background: #E11D2E;
+                    }
+
+                    &:last-of-type{
+                        padding: 25px 30px;
+                        margin: 0 0 0 25px;
+                        max-width: 379px;
+                        background: rgba(255, 255, 255, 0.05);
+                    }
+
                 }
 
-                a:first-of-type{
-                    color:black;
+            }
+
+            .copy_address_col{
+                margin: 20px 0 0 0;
+                padding: 15px 30px;
+                border: 1px solid rgba(255, 255, 255, 0.09);
+                border-radius: 10px;
+
+                label{
+                    display: flex;
+                    flex-direction: column;
+
+                    font-family: 'SF Pro Display', sans-serif;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: rgba(255, 255, 255, 0.2);
+
+
+                    button{
+                        padding: 0;
+                        border:none;
+                        background:none;
+                        font-weight: 400;
+                        font-size: 25px;
+                        line-height: 30px;
+                        text-align: start;
+                        color: rgba(255, 255, 255, 0.4);
+
+                    }
+
                 }
 
             }
