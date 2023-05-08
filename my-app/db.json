@@ -1,0 +1,80 @@
+{
+    "partner" : [
+        {
+            "id" : "1",
+            "name": "PinkSale",
+            "img": "/img/section/partner_img/image 41.png"
+        },
+        {
+            "id" : "2",
+            "name": "SandBox",
+            "img": "/img/section/partner_img/image 42.png"
+        },
+        {
+            "id" : "3",
+            "name": "Decentralend",
+            "img": "/img/section/partner_img/image 43.png"
+        },
+        {
+            "id" : "4",
+            "name": "CoinMarketCap",
+            "img": "/img/section/partner_img/image 44.png"
+        },
+        {
+            "id" : "5",
+            "name": "CoinGecko",
+            "img": "/img/section/partner_img/image 45.png"
+        },
+        {
+            "id" : "6",
+            "name": "CoinGecko",
+            "img": "/img/section/partner_img/image 46.png"
+        }        
+    ],
+    "team":[
+        {
+            "id": 1,
+            "name": "Harry Pham",
+            "position": "Founder and CEO",
+            "img": "/img/section/team/team_img1.png"
+        },
+        {
+            "id": 2,
+            "name": "Bui Cai",
+            "position": "Co-founder and CTO",
+            "img": "/img/section/team/team_img2.png"
+        },
+        {
+            "id": 3,
+            "name": "Binh Mai",
+            "position": "Blockchain expert",
+            "img": "/img/section/team/team_img3.png"
+        },
+        {
+            "id": 4,
+            "name": "Lisa Dowen",
+            "position": "Marketing and funnels",
+            "img": "/img/section/team/team_img4.png"
+        },
+        {
+            "id": 5,
+            "name": "Anna Roy",
+            "position": "Designer",
+            "img": "/img/section/team/team_img5.png"
+        },
+        {
+            "id": 6,
+            "name": "Marry Lors",
+            "position": "Developer",
+            "img": "/img/section/team/team_img1.png"
+        },
+        {
+            "id": 7,
+            "name": "Olena Pilip",
+            "position": "Front-end developer",
+            "img": "/img/section/team/team_img1.png"
+        }
+
+    ]
+
+}

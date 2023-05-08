@@ -1,0 +1,72 @@
+@use '/src/assets/module' as va;
+
+.nav {
+    display: flex;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+            margin: 0 0 0 15px;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 34px;
+            color: va.$main-text-color;
+
+            b {
+                color: va.$second-text-color;
+            }
+
+        }
+
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        margin: 0 70px 0 auto;
+
+        li {
+            margin: 0 25px 0 0;
+            cursor:pointer;
+
+            a {
+                font-family: 'SF Pro Display', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 17px;
+                color: rgba(255, 255, 255, 0.8);
+
+            }
+
+        }
+
+    }
+
+    // .bt_join {
+    //     margin: 0 0 0 70px;
+    //     padding: 10px 30px;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     background: #AC1216;
+    //     border-radius: 10px;
+    //     cursor:pointer;
+
+    //     color: rgba(255, 255, 255, 0.8);
+    //     font-family: 'SF Pro Display', sans-serif;
+    //     font-style: normal;
+    //     font-weight: 600;
+    //     font-size: 15px;
+    // }
+
+}

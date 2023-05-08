@@ -5,6 +5,7 @@
 
     .mainBaner_row {
         display: flex;
+        justify-content: space-between;
         align-items: center;
 
         .text_content {
@@ -25,58 +26,30 @@
 
             p {
                 margin: 40px 0 0 0;
-
-                max-width: 848px;
-                font-style: normal;
+                max-width: 737px;
                 font-weight: 400;
                 font-size: 32px;
                 line-height: 38px;
                 color: #A0A3B5;
             }
 
-            .bt_area{
+            .bt_area {
                 display: flex;
                 margin: 46px 0 0 0;
 
-                a{
-                    height: 80px;
-                    display: flex;
-                    justify-content: center;
-                    align-items:center;
-
-                    color:va.$main-text-color;
-                    font-weight: 700;
-                    font-size: 25px;
-                    line-height: 30px;
-                    color:va.$main-text-color;
-                    border-radius: 10px;
-                    white-space: nowrap;
-
-
-                    &:first-of-type{
-                        padding: 25px 54px;
-                        max-width: 295px;
-                        background: #E11D2E;
-                    }
-
-                    &:last-of-type{
-                        padding: 25px 30px;
-                        margin: 0 0 0 25px;
-                        max-width: 379px;
-                        background: rgba(255, 255, 255, 0.05);
-                    }
-
+                a:last-of-type {
+                    margin: 0 0 0 25px;
                 }
-
             }
 
-            .copy_address_col{
+            .copy_address_col {
+                max-width: 700px;
                 margin: 20px 0 0 0;
                 padding: 15px 30px;
                 border: 1px solid rgba(255, 255, 255, 0.09);
                 border-radius: 10px;
 
-                label{
+                label {
                     display: flex;
                     flex-direction: column;
 
@@ -87,18 +60,76 @@
                     color: rgba(255, 255, 255, 0.2);
 
 
-                    button{
+                    button {
                         padding: 0;
-                        border:none;
-                        background:none;
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+
                         font-weight: 400;
                         font-size: 25px;
                         line-height: 30px;
                         text-align: start;
                         color: rgba(255, 255, 255, 0.4);
+                        transition: 0.2s all;
 
                     }
 
+                }
+
+            }
+
+        }
+
+        .img_content_col {
+            width: fit-content;
+            position: relative;
+            z-index: 10;
+
+            .spider_shiba{
+                z-index: 10;
+                position: relative;
+
+                .shiba_head_img{
+                    position: absolute;
+                    top: 120px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                
+
+            }
+
+            .glowing_circles {
+                z-index: 0;
+                position: absolute;
+                border-radius: 100%;
+                filter: blur(50px);
+
+                &[data-circle='1'] {
+                    top: -62px;
+                    left:-20px;
+                    width: 693.3px;
+                    height: 694px;
+                    background: radial-gradient(33.58% 33.57% at 50% 50%, rgba(225, 29, 46, 0.5) 0%, rgba(255, 81, 96, 0.155) 100%);
+                }
+
+                &[data-circle='2'] {
+                    right: 34px;
+                    top: -9px;
+                    width: 295.7px;
+                    height: 296px;
+                    background: radial-gradient(34.94% 34.94% at 50% 50%, #E11D2E 0%, rgba(255, 81, 96, 0.58) 100%)
+                        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+                    ;
+                }
+
+                &[data-circle='3'] {
+                    bottom: -67px;
+                    right: 26px;
+                    width: 122.88px;
+                    height: 123px;
+                    background: radial-gradient(34.94% 34.94% at 50% 50%, #E11D2E 0%, rgba(255, 81, 96, 0.58) 100%);
                 }
 
             }

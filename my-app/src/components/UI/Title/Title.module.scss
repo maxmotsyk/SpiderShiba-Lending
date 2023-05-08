@@ -1,0 +1,11 @@
+@use '/src/assets/module' as va;
+
+.title {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    text-align: center;
+    color:va.$main-text-color;
+}

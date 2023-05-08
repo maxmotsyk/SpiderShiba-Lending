@@ -1,0 +1,35 @@
+@use '/src/assets/module' as va;
+
+
+.container_ticker{
+    margin: auto 0 0 0;
+
+    .ticker_row{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items:center;
+        background-color: #5A4039;
+    
+        span{
+            white-space: nowrap;
+            padding: 0 0 0 15px;    
+            text-transform: uppercase;
+            color:#FFF50099;
+            font-family: 'SF Pro Display';
+            animation: marquee 15s linear infinite;
+        }
+    
+    }
+
+}
+
+// @keyframes marquee {
+//     0% { transform: translate(0, 0); }
+//     100% { transform: translate(-100%, 0); }
+// }
+
+

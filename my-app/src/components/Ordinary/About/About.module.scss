@@ -1,0 +1,148 @@
+@use '/src/assets/module' as va;
+
+.about{
+    background: #101932;
+
+    .about_info{
+        position: relative;
+        padding: 50px;
+        min-height: 950px;
+        display: flex;
+        flex-direction: column;
+        background: url(../../../../public/img/section/spiderweb_img.svg) no-repeat center;
+
+        .more_info{
+            z-index: 10;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            margin: 116px 0 0 0;
+
+            h3{
+                margin:  0 0 235px 0;
+                text-align: center;
+                max-width: 552px;
+
+                font-family: 'SF Pro Display';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 35px;
+                line-height: 42px;
+                color:va.$main-text-color;
+            }
+
+        }
+
+        .social_link{
+
+            a{
+                position: absolute;
+                width: 108px;
+                height: 108px;
+                cursor: pointer;
+                border-radius: 50%;
+
+            }
+
+            a:nth-of-type(1){
+                top: 168px;
+                right: 448px;
+                background:#078de134 url(../../../../public/img/section/social_img/rotate_img.svg) no-repeat center;
+            }
+
+            a:nth-of-type(2){
+                top: 414px;
+                left: 448px;
+                background:#e11d2d34 url(../../../../public/img/section/social_img/vidio_img.svg) no-repeat center;
+            }
+
+            a:nth-of-type(3){
+                bottom: 130px;
+                right: 633px;
+                background:#ff942945 url(../../../../public/img/section/social_img/app_img.svg) no-repeat center;
+            }
+
+        }
+
+        .earth_img,.mini_shiba_img{
+            z-index: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .earth_img{
+            width: 350px;
+            height: 350px;
+        }
+
+        .mini_shiba_img{
+            width: 193.5px;
+            height: 193.5px;
+        }
+
+    }
+
+    .about_content{
+       
+
+        .cards_row{
+            margin: 50px 0 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items:flex-start;
+
+            .item{
+                width:496px;
+                padding:30px 40px;
+                display: flex;
+                flex-direction: column;
+                border-radius:20px;
+                background:#384D70;
+
+                font-family: 'SF Pro Display';
+                color:va.$main-text-color;
+
+                img{
+                    width: 120px;
+                    height: 120px;
+                    object-fit: contain;
+                }
+
+                h4{
+                    margin:30px 0 0 0;
+                    font-weight: 600;
+                    font-size: 35px;
+                    line-height: 42px;
+                }
+
+                span{
+                    margin:10px 0 0 0;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    opacity: 0.3;
+                }
+
+                .text{
+
+                    p{
+                        margin:30px 0 0 0;
+                        font-weight: 500;
+                        font-size: 25px;
+                        line-height: 30px;
+                        color: rgba(255, 255, 255, 0.7);
+                    }
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+}

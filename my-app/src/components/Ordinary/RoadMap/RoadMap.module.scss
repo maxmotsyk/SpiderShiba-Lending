@@ -1,0 +1,38 @@
+@use '/src/assets/module' as va;
+
+
+.roudeMap{
+    background: #101932;
+
+    .roudeMap_row{
+        position: relative;
+        margin: 70px 0 0 0 ;
+
+        .col{
+            padding: 0 40px;
+            margin:50px 0 0 0;
+        }
+
+        .progress_bar{
+            z-index: 10;
+            bottom: 0px;
+            left:50%;
+            transform: translate(-50%);
+            position: absolute;
+            height: calc(100% - 218px);
+            width: 4px;
+            background-color: #384D70;;
+
+            .active_bar{
+                height: calc(100% - (100% / 5) );
+                background-color:#E11D2E;
+            }
+
+        }
+
+
+    }
+
+
+
+}

@@ -1,0 +1,41 @@
+@use '/src/assets/module' as va;
+
+.partner_row{
+    display: flex;
+    justify-content: center;
+
+    .partners{
+        transition: 0.5s all;
+        
+        &.partners_ghostly{
+            height: 50px;
+            opacity: 0.1;
+            filter: grayscale(100%);
+            
+            &:not(:last-of-type){
+                margin: 0 10px 0 0 ;
+            }
+
+            &:hover,&:after{
+                opacity: 1;
+                filter: grayscale(0%);
+            }
+
+        }
+        
+        &.partner_bright{
+            height: 80px;
+
+            &:not(:last-of-type){
+                margin: 0 20px 0 0 ;
+            }
+
+            &:hover,&:after{
+                opacity: 0.1;
+                filter: grayscale(100%);
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,48 @@
+@use '/src/assets/module' as va;
+
+.button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    cursor: pointer;
+    white-space: nowrap;
+
+    font-family: 'SF Pro Display', sans-serif;
+    color:va.$main-text-color;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    border-radius: 10px;
+
+
+    &.bt_white{
+        padding: 25px 54px;
+        max-width: 379px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    &.bt_bright_red{
+        padding: 25px 54px;
+        max-width: 295px;
+        background: #E11D2E;
+    }
+
+    &.bt_sm_bright_red{
+        max-width: 215px;
+        padding:13px 40px;
+        font-size: 22px;
+        background: #E11D2E;
+        white-space: pre-wrap;
+
+    }
+
+    &.bt_sm_dull_red{
+        padding: 10px 30px;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+        font-size: 15px;
+        background: #AC1216;
+    }
+
+} 

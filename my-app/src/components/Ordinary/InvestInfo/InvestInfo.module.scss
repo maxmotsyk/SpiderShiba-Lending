@@ -1,0 +1,112 @@
+@use '/src/assets/module' as va;
+
+
+.investInfo{
+    background: #30298C;
+
+    .investInfo_row{
+        margin: 150px 0 150px 0;
+        width: clamp(360px, 100%, va.$container-width);
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+
+        .investInfo_content{
+            position: relative;
+            font-family: 'SF Pro Display';
+
+            &::before{
+                content:'';
+                top: -169px;
+                left: -111px;
+                width: 644px;
+                height: 662px;
+                position: absolute;
+                background: url(../../../../public/img/section/invest_info/bacground_spider_web.svg)  no-repeat center center;
+                background-size: contain;
+            }
+
+            h2{
+                text-align: left;
+                max-width: 450px;
+                margin:0 0 25px 0;
+            }
+
+            p{
+                margin:0 0 40px 0;
+                max-width: 550px;
+
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color:va.$main-text-color;
+                opacity: 0.6;
+            }
+
+            a{
+                max-width: 404px;
+                padding:25px 20px;
+                display: flex;
+                justify-content: center;
+                background: #E11D2E;
+                border-radius: 10px;
+                cursor:pointer;
+
+                color:va.$main-text-color;
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 30px;
+
+                &:hover,&:after{
+
+                }
+
+            }
+
+        }
+
+        .cards_info{
+            display: flex;
+            flex-direction: column;
+
+            .card{
+                max-width: 868px;
+                display: flex;
+
+                img{
+                    margin:0 20px 0 0;
+                    width: 107px;
+                    height: 107px;
+                    object-fit: contain;
+                }
+
+                .text{
+                    color:va.$main-text-color;
+
+                    h5{
+                        margin: 0 0 10px 0;
+                        font-weight: 700;
+                        font-size: 30px;
+                        line-height: 36px;
+                    }
+
+                    p{
+                        font-weight: 400;
+                        font-size: 32px;
+                        line-height: 38px;
+                        opacity: 0.8;
+                    }
+
+                }
+
+                &:not(:last-child){
+                    margin:0 0 50px 0;
+                }
+                
+            }
+
+        }
+
+    }
+
+}
