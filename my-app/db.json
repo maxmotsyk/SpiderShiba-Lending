@@ -75,6 +75,50 @@
             "img": "/img/section/team/team_img1.png"
         }
 
+    ],
+    "tokenData" : [
+        {
+            "id": "1",
+            "parNames": "marketing",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 19
+        }, {
+            "id": "2",
+            "parNames": "founders",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 5
+        },
+        {
+            "id": "3",
+            "parNames": "stacked",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 6
+        },
+        {
+            "id": "4",
+            "parNames": "liquidity",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 30
+        },
+        {
+            "id": "5",
+            "parNames": "advisors",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 10
+        },
+        {
+            "id": "6",
+            "parNames": "P2E",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 15
+        },
+        {
+            "id": "6",
+            "parNames": "NFT",
+            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
+            "data": 15
+        }
+        
     ]
 
 }
