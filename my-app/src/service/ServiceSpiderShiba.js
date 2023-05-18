@@ -17,6 +17,10 @@ class ServiceSpiderShiba {
         
     }
 
+    getRoudeMap = () =>{
+        
+    }
+
 }
 
 export default  ServiceSpiderShiba ;
