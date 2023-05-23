@@ -1,0 +1,48 @@
+.chart_card_body{
+    width: 444px;
+    height: 140px;
+    padding: 25px 30px ;
+    border-radius:15px;
+    background-color: #0B142C;
+
+    &:not(:last-child){
+        margin: 0 0 25px 0;
+    }
+
+    .progress_bar{
+       width: 100%;
+       margin: 0 0 10px 0;
+
+        hr{
+            margin: 0;
+            height: 3px;
+            border-radius: 1px;
+            border: none;
+
+            &:not(:last-of-type){
+                margin: 0 5px 0 0;
+            }
+        }
+
+    }
+
+    .text_col{
+        font-family: 'SF Pro Display';
+
+        h2{
+            color: #fff;
+            font-weight: 600;
+            font-size: 27px;
+            line-height: 32px;
+        }
+
+        p{
+            color: #545B6B;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+    }
+
+}

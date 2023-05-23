@@ -1,24 +1,28 @@
+import axios from "../api/axios";
 
 class ServiceSpiderShiba {
 
     getResource = async (url) => {
-        
-    }
+        let res = await axios.get(url);
 
-    getPartner = () => {
-
-    }
-
-    getTeam = () =>{
+        return await res.data;
 
     }
 
-    getDataChart = () => {
-        
+    getPartner = async () => {
+        return await this.getResource('/partner');
     }
 
-    getRoudeMap = () =>{
-        
+    getTeam = async () =>{
+        return await this.getResource('/team');
+    }
+
+    getDataChart = async() => {
+        return await this.getResource('/tokenData');
+    }
+
+    getRoudeMap = async () =>{
+        return await this.getResource('/roudeMapData');
     }
 
 }

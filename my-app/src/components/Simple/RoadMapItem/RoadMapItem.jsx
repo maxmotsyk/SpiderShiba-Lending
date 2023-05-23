@@ -1,6 +1,6 @@
 import s from './RoadMapItem.module.scss';
 
-const RoadMapItem = ({listItems, title, num, status}) =>{
+const RoadMapItem = ({ listItems, title, num, status}) =>{
 
     return(
 

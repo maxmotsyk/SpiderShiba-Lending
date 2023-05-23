@@ -1,0 +1,26 @@
+.chart_section{
+    padding: 70px 0 130px 0 ;
+    background-color: #101D3F;
+
+
+    .chart_row{
+        margin: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .chart{
+            width: 552px;
+            height: 552px;
+            background: url(../../../../public/img/section/mini_shiba_img.svg) no-repeat center;
+            canvas{
+              
+            }
+    
+        }
+
+    }   
+
+  
+
+}

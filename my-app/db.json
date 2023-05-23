@@ -1,32 +1,32 @@
 {
     "partner" : [
         {
-            "id" : "1",
+            "id" : 1,
             "name": "PinkSale",
             "img": "/img/section/partner_img/image 41.png"
         },
         {
-            "id" : "2",
+            "id" : 2,
             "name": "SandBox",
             "img": "/img/section/partner_img/image 42.png"
         },
         {
-            "id" : "3",
+            "id" : 3,
             "name": "Decentralend",
             "img": "/img/section/partner_img/image 43.png"
         },
         {
-            "id" : "4",
+            "id" : 4,
             "name": "CoinMarketCap",
             "img": "/img/section/partner_img/image 44.png"
         },
         {
-            "id" : "5",
+            "id" : 5,
             "name": "CoinGecko",
             "img": "/img/section/partner_img/image 45.png"
         },
         {
-            "id" : "6",
+            "id" : 6,
             "name": "CoinGecko",
             "img": "/img/section/partner_img/image 46.png"
         }        
@@ -79,44 +79,44 @@
     "tokenData" : [
         {
             "id": "1",
-            "parNames": "marketing",
+            "parNames": "19% on marketing",
             "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 19
+            "data": 19,
+            "colorBar": "#4E00FF"
         }, {
             "id": "2",
-            "parNames": "founders",
+            "parNames": "5% for founders, 6% stacked",
             "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 5
+            "data": 5,
+            "colorBar": "#FF850B"
         },
         {
             "id": "3",
-            "parNames": "stacked",
+            "parNames": "30% for liquidity",
             "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 6
+            "data": 30,
+            "colorBar": "#1DBEE1"
         },
         {
             "id": "4",
-            "parNames": "liquidity",
+            "parNames": "10% for advisors",
             "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 30
+            "data": 10,
+            "colorBar": "#133D81"
         },
         {
             "id": "5",
-            "parNames": "advisors",
+            "parNames": "P2e 15%",
             "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 10
+            "data": 15,
+            "colorBar": "#FF0000"
         },
         {
             "id": "6",
-            "parNames": "P2E",
+            "parNames": "NFT 15%",
             "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 15
-        },
-        {
-            "id": "6",
-            "parNames": "NFT",
-            "description":"Thanks to our ecosystem you will be able to earn passively and actively",
-            "data": 15
+            "data": 6,
+            "colorBar": "#663090"
         }
         
     ],
