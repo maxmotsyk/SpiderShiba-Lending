@@ -14,21 +14,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const Chart = ({ tokenData }) => {
 
     const setOptionForChart = {
-        cutout: "80%",
-        // plugins: {
-        //     datalabels: {
-        //         color: '#000',
-        //         font: {
-        //             size: 40,
-        //             weight: 'bold'
-        //         },
-        //         formatter: function (value, context) {
-        //             return context.chart.data.labels[context.dataIndex];
-        //         }
-        //     }
-
-        // }
-
+        cutout: "80%"
     }
 
     const setDataForChart = () => {
@@ -62,10 +48,7 @@ const Chart = ({ tokenData }) => {
 
             <div className="container">
 
-
                 <Title text={'Tokenomics'} />
-
-
 
                 <div className={s.chart_row}>
 

@@ -1,6 +1,8 @@
 import Header from './components/Smart/Header/Header';
-import './assets/reset_style.scss';
 import Main from './components/Smart/Main/Main';
+import Footer from './components/Smart/Footer/Footer';
+import './assets/reset_style.scss';
+
 
 function App() {
 
@@ -9,6 +11,7 @@ function App() {
     <div className="wrapper">
        <Header/>
        <Main/>
+       <Footer/>
     </div>
 
   );
