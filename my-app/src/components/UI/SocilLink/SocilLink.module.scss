@@ -1,0 +1,21 @@
+.link{
+    width: 108px;
+    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    border-radius:15px;
+    background: #E11D2E;
+    transition: 0.3s all;
+    cursor: pointer;
+
+    img{
+        object-fit: cover;
+    }
+
+    &:not(:last-child){
+        margin:0 40px 0 0;
+    }
+
+}

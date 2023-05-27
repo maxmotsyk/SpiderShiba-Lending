@@ -6,7 +6,8 @@ import InvestInfo from '../../Ordinary/InvestInfo/InvestInfo';
 import RoudeMap from '../../Ordinary/RoadMap/RoadMap';
 import Team from '../../Ordinary/Team/Team';
 import ServiceSpiderShiba from '../../../service/ServiceSpiderShiba';
-
+import Faq from '../../Ordinary/Faq/Faq';
+import Community from '../../Ordinary/Community/Community';
 
 const Main = () => {
 
@@ -14,6 +15,7 @@ const Main = () => {
     const [team, setTeam] = useState([]);
     const [tokenData, setTokeData] = useState([]);
     const [roudeMapData, setRoudeMapData] = useState([]);
+    const [FaqData, setFaqData] = useState([]);
 
 
     const getAllData =  async () =>{
@@ -30,8 +32,13 @@ const Main = () => {
 
         serviceSpiderShiba.getDataChart()
         .then(res => setTokeData(res));
+
+        serviceSpiderShiba.getFaq()
+        .then(res => setFaqData(res));
         
     }
+
+    console.log(FaqData)
 
 
     useEffect(()=>{
@@ -47,7 +54,8 @@ const Main = () => {
             <RoudeMap roadMapdata={roudeMapData}/>
             <Team data={partner} team ={team}/>
             <Chart tokenData ={tokenData}/> 
-        
+            <Faq FaqData = {FaqData}/>
+            <Community/>
         </main>
 
     )

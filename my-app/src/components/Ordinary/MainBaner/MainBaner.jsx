@@ -1,6 +1,7 @@
 import s from './MainBaner.module.scss';
 import Button from '../../UI/Button/Button';
 import Ticker from '../../Simple/Ticker/Ticker';
+import ClipBoard from '../../Simple/ClipBoard/ClipBoard';
 
 const MainBaner = () => {
 
@@ -42,16 +43,8 @@ const MainBaner = () => {
 
                         </div>
 
-
-                        <div className={s.copy_address_col}>
-
-                            <label>
-                                Contract address:
-                                <button onClick={(e) => { saveToClipboard(e.target) }}>0xe4C6E7a0F696Fb2356A187020eb13E742792Fdcc</button>
-                            </label>
-
-                        </div>
-
+                        <ClipBoard label={"Contract address:"} address={'0xe4C6E7a0F696Fb2356A187020eb13E742792Fdcc'}/>
+                        
                     </div>
 
                     <div className={s.img_content_col}>

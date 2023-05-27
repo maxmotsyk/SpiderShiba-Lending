@@ -25,6 +25,10 @@ class ServiceSpiderShiba {
         return await this.getResource('/roudeMapData');
     }
 
+    getFaq = async () => {
+        return await this.getResource('/FAQ');
+    }
+
 }
 
 export default  ServiceSpiderShiba ;

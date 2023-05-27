@@ -1,0 +1,40 @@
+.copy_address_col {
+    max-width: 700px;
+    margin: 20px 0 0 0;
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 10px;
+
+    label{
+        display: flex;
+        flex-direction: column;
+        font-family: 'SF Pro Display', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: rgba(255, 255, 255, 0.2);
+
+        button{
+            padding: 0;
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 30px;
+            text-align: start;
+            color: rgba(255, 255, 255, 0.4);
+            transition: 0.2s all;
+        }
+
+    }
+    
+
+    &.round_clipBoard{
+        padding: 20px 50px;
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 0.3);
+    }
+    
+}
