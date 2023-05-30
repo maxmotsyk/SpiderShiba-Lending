@@ -38,9 +38,6 @@ const Main = () => {
         
     }
 
-    console.log(FaqData)
-
-
     useEffect(()=>{
         getAllData()
     },[])

@@ -1,6 +1,9 @@
+import { forwardRef } from 'react';
+import {motion} from'framer-motion';
+
 import s from './ClipBoard.module.scss';
 
-const ClipBoard = ({label, address, variant}) => {
+const ClipBoard = forwardRef(({label, address, variant}, ref) => {
 
     const setStyle = () => {
         // eslint-disable-next-line default-case
@@ -23,7 +26,9 @@ const ClipBoard = ({label, address, variant}) => {
     }
 
     return(
-        <div className={`${s.copy_address_col} ${setStyle()}`}>
+        <div ref={ref} 
+            className={`${s.copy_address_col} 
+            ${setStyle()}`}>
 
             <label>
                 {label}
@@ -33,6 +38,8 @@ const ClipBoard = ({label, address, variant}) => {
         </div>
     )
 
-}
+})
 
 export default ClipBoard;
+
+export const MClipBoard = motion(ClipBoard);

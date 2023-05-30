@@ -1,10 +1,12 @@
+import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 import s from './Ticker.module.scss';
 
-const Ticker = () =>{
+const Ticker = forwardRef((props,ref) =>{
 
     return(
         
-        <div className={`container_fluid ${s.container_ticker}`}>
+        <div ref={ref} className={`container_fluid ${s.container_ticker}`}>
 
             <div className={s.ticker_row}>
                 <span>WARNING: this is not a meme coin</span>
@@ -23,6 +25,6 @@ const Ticker = () =>{
 
     )
 
-}
-
+})
 export default Ticker;
+export const MTicker = motion(Ticker);

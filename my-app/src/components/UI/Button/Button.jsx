@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+import {motion} from'framer-motion'
 import s from './Button.module.scss';
 
 const buttonClass = {
@@ -8,16 +10,19 @@ const buttonClass = {
     smallDul : `${s.button} ${s.bt_sm_dull_red}`
 }
 
-const Button = ({variant, href, text}) =>{
+const Button = forwardRef(({variant, href, text},ref) =>{
 
     return(
 
-        <a className={buttonClass[variant]} href={href}>
+        <a 
+            ref={ref}
+            className={buttonClass[variant]} href={href}>
             {text}
         </a>
 
     )
 
-}
+})
 
 export default Button;
+export const MButton = motion(Button);
