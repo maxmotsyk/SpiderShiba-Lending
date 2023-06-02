@@ -8,6 +8,7 @@ import Team from '../../Ordinary/Team/Team';
 import ServiceSpiderShiba from '../../../service/ServiceSpiderShiba';
 import Faq from '../../Ordinary/Faq/Faq';
 import Community from '../../Ordinary/Community/Community';
+import PartnerRow from '../../Simple/PartnerRow/PartnerRow';
 
 const Main = () => {
 

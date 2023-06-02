@@ -1,6 +1,6 @@
 import s from './MainBaner.module.scss';
 import { MButton } from '../../UI/Button/Button';
-import Ticker ,{MTicker} from '../../Simple/Ticker/Ticker'
+import Ticker from '../../Simple/Ticker/Ticker'
 import { MClipBoard } from '../../Simple/ClipBoard/ClipBoard';
 import {motion} from'framer-motion'
 
@@ -21,7 +21,6 @@ const MainBaner = () => {
     return (
 
         <>
-
             <motion.div 
                 initial = "hidden"
                 viewport={{once: true}}
@@ -104,6 +103,7 @@ const MainBaner = () => {
                                         duration: 2,
                                         repeat: Infinity,
                                         repeatType:'mirror',
+                                        ease: 'linear',
                                         repeatDelay: 0,
                                     }}
                                     src="/img/section/dog_head_img.svg" />

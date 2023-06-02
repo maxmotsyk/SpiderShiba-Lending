@@ -74,8 +74,11 @@
         }
 
         .earth_img{
-            width: 350px;
-            height: 350px;
+
+            img{
+                width: 350px;
+                height: 350px;
+            }
         }
 
         .mini_shiba_img{
@@ -86,15 +89,17 @@
     }
 
     .about_content{
-       
-
+        padding: 0 0 50px;
+        
         .cards_row{
+            min-height: 600px;
             margin: 50px 0 0 0;
             display: flex;
             justify-content: space-between;
             align-items:flex-start;
 
             .item{
+                overflow: hidden;
                 width:496px;
                 padding:30px 40px;
                 display: flex;

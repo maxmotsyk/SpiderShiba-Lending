@@ -1,30 +1,37 @@
-import { motion } from 'framer-motion';
-import { forwardRef } from 'react';
 import s from './Ticker.module.scss';
 
-const Ticker = forwardRef((props,ref) =>{
+const Ticker = () => {
+
+    const renderTickerWords = () => {
+        const word = "WARNING: this is not a meme coin";
+        const wordWidth = 280;
+        const windowWidth = window.innerWidth;
+        let countWord  =  Math.round(windowWidth / wordWidth) + 2;
+        let mass = [];
+        
+        for(let i = 0; i <= countWord; i++) {
+            mass.push(word);
+        }
+
+        return mass;
+     
+    }
+
 
     return(
         
-        <div ref={ref} className={`container_fluid ${s.container_ticker}`}>
+        <div className={`container_fluid ${s.container_ticker}`}>
 
-            <div className={s.ticker_row}>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-                <span>WARNING: this is not a meme coin</span>
-            </div>
+            <ul 
+            className={s.ticker_row}>
+               {
+                renderTickerWords().map((item)=> <li>{item}</li>)
+               }
+            </ul>
 
         </div>
 
     )
 
-})
+}
 export default Ticker;
-export const MTicker = motion(Ticker);

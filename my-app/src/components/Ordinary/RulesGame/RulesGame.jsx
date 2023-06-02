@@ -1,7 +1,22 @@
+import { motion } from 'framer-motion';
 import s from './RulesGame.module.scss';
 import Title from '../../UI/Title/Title';
 
 const RulesGame = () => {
+
+    const animationCard = {
+        hidden: {
+            opacity: 0,
+            x:-100
+        },
+        visible: (custom) => ({
+            opacity: 1,
+            x: 0,
+            transition: { 
+                delay: custom * 0.2 
+            }
+        })
+    }
 
     return (
 
@@ -17,9 +32,19 @@ const RulesGame = () => {
                         Many ways to earn tokens and NFTs
                     </p>
 
-                    <div className={s.content_info}>
+                    <motion.div 
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{
+                            amount : 1,
+                            once: true
+                          }}
+                        className={s.content_info}>
 
-                        <div className={s.big_card}>
+                        <motion.div 
+                            variants = {animationCard}
+                            custom={1}
+                            className={s.big_card}>
 
                             <img src="/img/section/rulse_game_img/game_illustration.png" alt="game_illustration" />
 
@@ -52,11 +77,14 @@ const RulesGame = () => {
 
                             </div>
 
-                        </div>
+                        </motion.div>
 
                         <div className={s.smal_cards}>
 
-                            <div className={s.card}>
+                            <motion.div
+                             variants = {animationCard}
+                             custom={3}
+                             className={s.card}>
 
                                 <img src="/img/section/rulse_game_img/Coin_img.png" alt="coin_img" />
 
@@ -73,9 +101,12 @@ const RulesGame = () => {
 
                                 </div>
 
-                            </div>
+                            </motion.div>
 
-                            <div className={s.card}>
+                            <motion.div 
+                                variants = {animationCard}
+                                custom={2}
+                                className={s.card}>
 
                                 <img src="/img/section/rulse_game_img/Megaphone_img.png" alt="megaphone_img" />
 
@@ -91,11 +122,11 @@ const RulesGame = () => {
 
                                 </div>
 
-                            </div>
+                            </motion.div>
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
                 </div>
 
