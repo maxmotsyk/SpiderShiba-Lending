@@ -1,8 +1,21 @@
 import s from './InvestInfo.module.scss';
+import { motion } from 'framer-motion';
 import Title from '../../UI/Title/Title';
 
 
 const InvestInfo = () => {
+
+    const animationText = {
+        hidden :{
+            y: -100,
+            opacity: 0 
+        },
+        visibale: custom =>({
+            y: 0,
+            opacity: 1,
+            transition: {delay: custom * 0.2}
+        })
+    }
 
     return (
 
@@ -10,9 +23,16 @@ const InvestInfo = () => {
 
             <div className="container_fluid">
 
-                <div className={s.investInfo_row}>
+                <motion.div 
+                    initial = "hidden"
+                    whileInView= "visibale"
+                    viewport={{once: true}}
+                    className={s.investInfo_row}>
 
-                    <div className={s.investInfo_content}>
+                    <motion.div 
+                        variants={animationText}
+                        custom={1}
+                        className={s.investInfo_content}>
 
                         <Title text={'Why invest in SpiderShiba Inu?'} />
 
@@ -27,11 +47,14 @@ const InvestInfo = () => {
                         </a>
 
 
-                    </div>
+                    </motion.div>
 
                     <div className={s.cards_info}>
 
-                        <div className={s.card}>
+                        <motion.div 
+                            variants={animationText}
+                            custom={2}
+                            className={s.card}>
 
                             <img src="/img/section/invest_info/Group 91.svg" alt="trend up icon" />
 
@@ -49,9 +72,12 @@ const InvestInfo = () => {
 
                             </div>
 
-                        </div>
+                        </motion.div>
 
-                        <div className={s.card}>
+                        <motion.div 
+                            variants={animationText}
+                            custom={3}
+                            className={s.card}>
 
                             <img src="/img/section/invest_info/star_ico.svg" alt="star_icon" />
 
@@ -69,11 +95,11 @@ const InvestInfo = () => {
 
                             </div>
 
-                        </div>
+                        </motion.div>
 
                     </div>
 
-                </div>
+                </motion.div>
 
             </div>
 

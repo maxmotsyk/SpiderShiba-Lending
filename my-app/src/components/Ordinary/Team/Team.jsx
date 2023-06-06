@@ -1,4 +1,5 @@
 import s from './Team.module.scss';
+import { motion } from 'framer-motion';
 import {Pagination} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -14,7 +15,25 @@ const Team = ({ data, team }) => {
 
             <div className="container">
 
-                <div className={s.slider_team}>
+                <motion.div 
+                    initial = "hidden"
+                    whileInView = "visibale"
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            y: -100
+                        },
+                        visibale: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {delay: 0.3}
+                        }
+                    }}
+                    viewport={{
+                        amount : 0.5,
+                        once: true
+                    }}
+                    className={s.slider_team}>
 
                     <Title text={'Team'} />
 
@@ -62,7 +81,7 @@ const Team = ({ data, team }) => {
 
                     </div>
 
-                </div>
+                </motion.div>
 
                 <div className={s.partners}>
                     <Title text={'Partners & Investors'} />

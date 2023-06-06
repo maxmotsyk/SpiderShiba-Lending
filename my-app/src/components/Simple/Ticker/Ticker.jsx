@@ -25,7 +25,7 @@ const Ticker = () => {
             <ul 
             className={s.ticker_row}>
                {
-                renderTickerWords().map((item)=> <li>{item}</li>)
+                renderTickerWords().map((item,i)=> <li key={i}>{item}</li>)
                }
             </ul>
 

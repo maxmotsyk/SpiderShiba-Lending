@@ -1,14 +1,28 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Title from "../../UI/Title/Title";
 import s from './Chart.module.scss';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
-import ChartCard from "../../Simple/CharCard/ChartCard";
+import {MChartCard} from "../../Simple/CharCard/ChartCard";
 // import smalLogo from '../../../../public/img/section/mini_shiba_img.svg'
 
-
 ChartJS.register(ArcElement, Tooltip, Legend);
+
+const animationChartCarf = {
+
+    hidden :{
+        y:200,
+        opacity: 0 
+    },
+    visibale: custom =>({
+        y: 0,
+        opacity: 1,
+        transition: {delay: custom * 0.15}
+    })
+
+}
 
 
 const Chart = ({ tokenData }) => {
@@ -46,7 +60,14 @@ const Chart = ({ tokenData }) => {
 
         <section className={s.chart_section}>
 
-            <div className="container">
+            <motion.div
+                initial ="hidden"
+                whileInView="visibale"
+                viewport={{
+                    amount : 0.5,
+                    once: true
+                }}
+                className="container">
 
                 <Title text={'Tokenomics'} />
 
@@ -54,9 +75,12 @@ const Chart = ({ tokenData }) => {
 
                     <div className={s.chart_cards}>
                         {
-                            tokenData.slice(0, Math.round(tokenData.length / 2)).map(({ parNames, description, data, colorBar }) => {
+                            tokenData.slice(0, Math.round(tokenData.length / 2)).map(({id,parNames, description, data, colorBar }, i) => {
                                 return (
-                                    <ChartCard
+                                    <MChartCard
+                                        variants = {animationChartCarf}
+                                        key={id}
+                                        custom = {i}
                                         titleBar={parNames}
                                         descriptionBar={description}
                                         data1Bar={data}
@@ -74,9 +98,12 @@ const Chart = ({ tokenData }) => {
 
                     <div className={s.chart_cards}>
                         {
-                            tokenData.slice( Math.round(tokenData.length / 2), tokenData.length).map(({ parNames, description, data, colorBar }) => {
+                            tokenData.slice( Math.round(tokenData.length / 2), tokenData.length).map(({id, parNames, description, data, colorBar }, i) => {
                                 return (
-                                    <ChartCard
+                                    <MChartCard
+                                        variants = {animationChartCarf}
+                                        custom={i}
+                                        key={id}
                                         titleBar={parNames}
                                         descriptionBar={description}
                                         data1Bar={data}
@@ -90,7 +117,7 @@ const Chart = ({ tokenData }) => {
                 </div>
 
 
-            </div>
+            </motion.div>
 
         </section>
     )

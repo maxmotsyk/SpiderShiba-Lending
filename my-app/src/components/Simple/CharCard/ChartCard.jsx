@@ -1,9 +1,14 @@
 import s from './ChartCard.module.scss';
+import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 
-const ChartCard = ({titleBar, data1Bar, data2Bar, descriptionBar, color1Bar, color2Bar}) => {
+
+const ChartCard = forwardRef(({titleBar, data1Bar, data2Bar, descriptionBar, color1Bar, color2Bar},ref) => {
 
     return(
-        <div className={s.chart_card_body}>
+        <div
+            ref={ref}
+            className={s.chart_card_body}>
 
             <div className={s.progress_bar}>
                 <hr style={{width : `${data1Bar}%` , background: color1Bar}} />
@@ -24,7 +29,9 @@ const ChartCard = ({titleBar, data1Bar, data2Bar, descriptionBar, color1Bar, col
         </div>
     )
 
-}
+})
 
 
 export default ChartCard;
+
+export const MChartCard = motion(ChartCard);

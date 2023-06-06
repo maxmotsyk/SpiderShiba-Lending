@@ -1,4 +1,5 @@
 import s from './RoadMap.module.scss';
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import Title from '../../UI/Title/Title';
 import RoadMapItem from '../../Simple/RoadMapItem/RoadMapItem';
 
@@ -20,7 +21,8 @@ const RoudeMap = ({roadMapdata}) => {
 
                         {
                             roadMapdata.map(({id, title, tasks, status}, i) => {
-                               return  <RoadMapItem key = {id} 
+                               return  <RoadMapItem 
+                                        key = {id} 
                                         listItems = {tasks} 
                                         title = {title} 
                                         num = {i + 1}
