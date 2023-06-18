@@ -56,6 +56,26 @@ const Chart = ({ tokenData }) => {
 
     }
 
+    const setChartCard = (from, to) => {
+
+        return tokenData.slice(from, to).map(({id,parNames, description, data, colorBar }, i) => {
+            
+            return (
+                <MChartCard
+                    variants = {animationChartCarf}
+                    key={id}
+                    custom = {i}
+                    titleBar={parNames}
+                    descriptionBar={description}
+                    data1Bar={data}
+                    color1Bar={colorBar}
+                />
+            )
+            
+        })
+
+    }
+
     return (
 
         <section className={s.chart_section}>
@@ -75,19 +95,7 @@ const Chart = ({ tokenData }) => {
 
                     <div className={s.chart_cards}>
                         {
-                            tokenData.slice(0, Math.round(tokenData.length / 2)).map(({id,parNames, description, data, colorBar }, i) => {
-                                return (
-                                    <MChartCard
-                                        variants = {animationChartCarf}
-                                        key={id}
-                                        custom = {i}
-                                        titleBar={parNames}
-                                        descriptionBar={description}
-                                        data1Bar={data}
-                                        color1Bar={colorBar}
-                                    />
-                                )
-                            })
+                            setChartCard(0,Math.round(tokenData.length / 2))
                         }
                     </div>
 
@@ -98,24 +106,11 @@ const Chart = ({ tokenData }) => {
 
                     <div className={s.chart_cards}>
                         {
-                            tokenData.slice( Math.round(tokenData.length / 2), tokenData.length).map(({id, parNames, description, data, colorBar }, i) => {
-                                return (
-                                    <MChartCard
-                                        variants = {animationChartCarf}
-                                        custom={i}
-                                        key={id}
-                                        titleBar={parNames}
-                                        descriptionBar={description}
-                                        data1Bar={data}
-                                        color1Bar={colorBar}
-                                    />
-                                )
-                            })
+                            setChartCard(Math.round(tokenData.length / 2), tokenData.length)
                         }
                     </div>
 
                 </div>
-
 
             </motion.div>
 

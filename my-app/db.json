@@ -157,6 +157,18 @@
            ]
         },
         {
+            "id":43,
+            "title":"Dec - Jan 2022",
+            "status":true,
+            "tasks":[
+               "Official launch on pinksale ☑️",
+               "Start marketing campaign ☑️",
+               "Airdrop",
+               "Panckacke swap launch ☑️",
+               "Start of collaborations with decentraland and the sandbox ☑️"
+            ]
+         },
+        {
            "id":4,
            "title":"Q1 2022",
            "status":false,

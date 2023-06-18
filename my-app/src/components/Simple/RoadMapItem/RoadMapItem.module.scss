@@ -4,61 +4,79 @@
     position: relative;
     display: flex;
     margin:0 0 60px 0 ;
-    padding: 30px 35px;
     width: clamp(300px, 100%, 792px);
-    min-height: 216px;
+    padding: 30px 35px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
+    min-height: 216px;
 
-    .num_card{
-        width: 138px;
-        height: 146px;
-        margin: 0 30px 0 0 ;
+    .content{
         display: flex;
-        align-items:center;
-        justify-content: center;
-        border-radius:30px;
 
-        h3{
+        .num_card{
+            width: 138px;
+            height: 146px;
+            margin: 0 30px 0 0 ;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            border-radius:30px;
+    
+            h3{
+                font-family: 'SF Pro Display';
+                font-weight: 700;
+                font-size: 65px;
+                line-height: 78px;
+            }
+    
+        }
+    
+        .text{
             font-family: 'SF Pro Display';
-            font-weight: 700;
-            font-size: 65px;
-            line-height: 78px;
+            color:#BABDC5;
+    
+            h4{
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 36px;
+                color:va.$main-text-color;
+            }
+    
+            ul{
+                margin: 20px 0 0 0;
+                padding:0;
+                list-style:inside;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 30px;
+    
+                li:not(:last-child){
+                    margin: 0 0 5px 0 ;
+                }
+    
+                li::after{
+                    content:'';
+                    display: block;
+                }
+    
+    
+            }
+    
         }
 
     }
 
-    .text{
-        font-family: 'SF Pro Display';
-        color:#BABDC5;
-
-        h4{
-            font-weight: 500;
-            font-size: 30px;
-            line-height: 36px;
-            color:va.$main-text-color;
-        }
-
-        ul{
-            margin: 20px 0 0 0;
-            padding:0;
-            list-style:inside;
-            font-weight: 400;
-            font-size: 25px;
-            line-height: 30px;
-
-            li:not(:last-child){
-                margin: 0 0 5px 0 ;
-            }
-
-            li::after{
-                content:'';
-                display: block;
-            }
-
-
-        }
-
+    .point{
+        box-sizing: border-box;
+        z-index: 20;
+        position: absolute;
+        top:50%;
+        right: -51px;
+        transform: translate(-50%);
+        width: 14px;
+        height: 14px;
+        display: block;
+        border-radius:50%;
     }
 
     &.body_item_done{
@@ -75,39 +93,9 @@
 
         }
 
-        &:after{
-            z-index: 20;
-            position: absolute;
-            top:50%;
-            right: -53px;
-            transform: translate(-50%);
-            width: 12px;
-            height: 12px;
-            content:'';
-            display: block;
-            border-radius:50%;
-
+        .point{
             background: #FF0000;
             border: 2px solid rgba(255, 255, 255, 0.5);
-            
-        }
-
-        &:not(:last-of-type){
-
-            &::before{
-                position: absolute;
-                z-index: 20;
-                content:'';
-                top:50%;
-                right: -41px;
-                transform: translate(-50%);
-                display: block;
-                width: 4px;
-                height: calc(100% + 2px + 60px);
-                background:red;
-    
-            }
-            
         }
 
     }
@@ -124,21 +112,9 @@
 
         }
 
-        &:after{
-            z-index: 20;
-            position: absolute;
-            top:50%;
-            right: -53px;
-            transform: translate(-50%);
-            width: 12px;
-            height: 12px;
-            content:'';
-            display: block;
-            border-radius:50%;
-
+        .point{
             background: #FFFFFF;
             border: 2px solid rgba(0, 0, 0, 0.5);
-            
         }
 
     }
@@ -146,7 +122,7 @@
     &:nth-child(2n){
         margin: 0 0 60px auto;
         
-        &:after, &:before{
+        .point{
             left: -38px;
         }
 

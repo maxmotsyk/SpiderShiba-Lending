@@ -24,7 +24,8 @@
             background-color: #384D70;;
 
             .active_bar{
-                height: calc(100% - (100% / 5) );
+                height: 1px;
+                transform-origin:top;
                 background-color:#E11D2E;
             }
 

@@ -1,37 +1,46 @@
 import s from './RoadMapItem.module.scss';
+import { forwardRef } from 'react';
+import { motion } from 'framer-motion';
 
-const RoadMapItem = ({ listItems, title, num, status}) =>{
+const RoadMapItem = forwardRef(({ listItems, title, num, status }, ref) => {
 
-    return(
+    return (
 
-        <div className={`${s.body_item} ${status ? s.body_item_done : s.body_item_not_done}`}>
+        <div ref={ref} className={`${s.body_item} ${status ? s.body_item_done : s.body_item_not_done}`}>
+            
+            <div className={s.content}>
 
-            <div className={s.num_card}>
+                <div className={s.num_card}>
 
-                <h3>{num}</h3>
+                    <h3>{num}</h3>
+
+                </div>
+
+                <div className={s.text}>
+
+                    <h4>{title}</h4>
+
+                    <ul>
+                        {
+                            listItems?.map((item) => {
+                                return <li>{item}</li>
+                            })
+
+                        }
+                    </ul>
+
+
+                </div>
 
             </div>
 
-            <div className={s.text}>
-                
-                <h4>{title}</h4>
-
-                <ul>
-                    {  
-                        listItems?.map((item)=>{
-                           return  <li>{item}</li>
-                        })
-                        
-                    }
-                </ul>   
-              
-        
-            </div>
+            <div className={s.point}></div>
 
         </div>
 
     )
 
-}
+})
 
 export default RoadMapItem;
+export const MRoadMapItem = motion(RoadMapItem);
