@@ -16,6 +16,7 @@
             font-family: 'SF Pro Display';
 
             &::before{
+                z-index: 5;
                 content:'';
                 top: -169px;
                 left: -111px;
@@ -35,7 +36,6 @@
             p{
                 margin:0 0 40px 0;
                 max-width: 550px;
-
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 24px;
@@ -43,25 +43,7 @@
                 opacity: 0.6;
             }
 
-            a{
-                max-width: 404px;
-                padding:25px 20px;
-                display: flex;
-                justify-content: center;
-                background: #E11D2E;
-                border-radius: 10px;
-                cursor:pointer;
-
-                color:va.$main-text-color;
-                font-weight: 700;
-                font-size: 25px;
-                line-height: 30px;
-
-                &:hover,&:after{
-
-                }
-
-            }
+           
 
         }
 

@@ -53,7 +53,7 @@ const Main = () => {
             <Team data={partner} team ={team}/>
             <Chart tokenData ={tokenData}/> 
             <Faq FaqData = {FaqData}/>
-            <Community/>
+            <Community />
         </main>
 
     )

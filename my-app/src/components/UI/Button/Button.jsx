@@ -14,11 +14,13 @@ const Button = forwardRef(({variant, href, text},ref) =>{
 
     return(
 
-        <a 
+        <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             ref={ref}
             className={buttonClass[variant]} href={href}>
             {text}
-        </a>
+        </motion.a>
 
     )
 

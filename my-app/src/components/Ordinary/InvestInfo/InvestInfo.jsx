@@ -1,6 +1,7 @@
 import s from './InvestInfo.module.scss';
 import { motion } from 'framer-motion';
 import Title from '../../UI/Title/Title';
+import { MButton } from '../../UI/Button/Button';
 
 
 const InvestInfo = () => {
@@ -42,10 +43,7 @@ const InvestInfo = () => {
                             of what happened in crypto industry
                         </p>
 
-                        <a href="#" aria-label='more about SpiderShiba'>
-                            Learn more about SpiderShiba
-                        </a>
-
+                        <MButton variant='bright' text="Learn more about SpiderShiba" />
 
                     </motion.div>
 

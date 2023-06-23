@@ -1,6 +1,7 @@
 @use '/src/assets/module' as va;
 
 .button{
+    position: relative;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -23,8 +24,9 @@
     }
 
     &.bt_bright_red{
+            z-index: 50;
+        width: min-content;
         padding: 25px 54px;
-        max-width: 295px;
         background: #E11D2E;
     }
 
